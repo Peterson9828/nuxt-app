@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useBeerStore } from "~/store/beer";
+import { useBeerStore } from '~/store/beer';
 const beerStore = useBeerStore();
 await beerStore.fetchList();
 </script>

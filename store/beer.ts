@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import { DEFAULT_PAGE_SIZE, DEFAULT_PAGE, API_URL } from "~/constants";
-import { Beer } from "~/types/beer";
+import type { Beer } from "~/models/beer";
 
 const module = "beers";
 

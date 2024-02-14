@@ -1,11 +1,16 @@
 <script setup lang="ts">
 import { useBeerStore } from "~/store/beer";
+import {DEFAULT_PAGE} from "~/constants";
 const beerStore = useBeerStore();
+
 watch(
-  () => beerStore.filtersName.beer_name,
-  async () => {
-    await beerStore.fetchList();
-  }
+    () => beerStore.filtersName.beer_name,
+    () => {
+      if (beerStore.filters.page === DEFAULT_PAGE){
+        beerStore.fetchList();
+      }
+      beerStore.filters.page = DEFAULT_PAGE;
+    }
 );
 </script>
 

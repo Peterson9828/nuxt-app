@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Beer } from "~/types/beer";
+import type { Beer } from "~/models/beer";
 defineProps<{
   items: Beer[];
 }>();
